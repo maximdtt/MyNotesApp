@@ -18,6 +18,11 @@
 		312EA2972C56911800893BF2 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312EA2962C56911800893BF2 /* Note.swift */; };
 		312EA29B2C5691FD00893BF2 /* NotesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312EA29A2C5691FD00893BF2 /* NotesListViewModel.swift */; };
 		312EA29D2C5693DC00893BF2 /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312EA29C2C5693DC00893BF2 /* TableViewSection.swift */; };
+		317D044D2C5BEDFB00FD0A3D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 317D044B2C5BEDFB00FD0A3D /* Model.xcdatamodeld */; };
+		317D04502C5BF9B200FD0A3D /* NoteEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317D044E2C5BF9B200FD0A3D /* NoteEntity+CoreDataClass.swift */; };
+		317D04512C5BF9B200FD0A3D /* NoteEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317D044F2C5BF9B200FD0A3D /* NoteEntity+CoreDataProperties.swift */; };
+		317D04532C5D2CFD00FD0A3D /* NotePersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317D04522C5D2CFD00FD0A3D /* NotePersistent.swift */; };
+		317D04552C5D2ED300FD0A3D /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317D04542C5D2ED300FD0A3D /* NoteViewModel.swift */; };
 		3180BE382C593CEF007A1C96 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3180BE372C593CEF007A1C96 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +39,11 @@
 		312EA2962C56911800893BF2 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		312EA29A2C5691FD00893BF2 /* NotesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewModel.swift; sourceTree = "<group>"; };
 		312EA29C2C5693DC00893BF2 /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
+		317D044C2C5BEDFB00FD0A3D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		317D044E2C5BF9B200FD0A3D /* NoteEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		317D044F2C5BF9B200FD0A3D /* NoteEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		317D04522C5D2CFD00FD0A3D /* NotePersistent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePersistent.swift; sourceTree = "<group>"; };
+		317D04542C5D2ED300FD0A3D /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		3180BE372C593CEF007A1C96 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,9 +88,11 @@
 			children = (
 				312EA2792C56797600893BF2 /* AppDelegate.swift */,
 				312EA29C2C5693DC00893BF2 /* TableViewSection.swift */,
+				317D04522C5D2CFD00FD0A3D /* NotePersistent.swift */,
 				3180BE392C593D11007A1C96 /* Note */,
 				312EA2992C5691AD00893BF2 /* NotesList */,
 				3119D70B2C569B30002FB23E /* Extensions */,
+				317D044A2C5BED7300FD0A3D /* CoreData */,
 				312EA2822C56797700893BF2 /* Assets.xcassets */,
 				312EA2842C56797700893BF2 /* LaunchScreen.storyboard */,
 				312EA2872C56797700893BF2 /* Info.plist */,
@@ -124,20 +136,39 @@
 			path = NotesList;
 			sourceTree = "<group>";
 		};
+		317D044A2C5BED7300FD0A3D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				317D044E2C5BF9B200FD0A3D /* NoteEntity+CoreDataClass.swift */,
+				317D044F2C5BF9B200FD0A3D /* NoteEntity+CoreDataProperties.swift */,
+				317D044B2C5BEDFB00FD0A3D /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		317D04562C5D2EDD00FD0A3D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				317D04542C5D2ED300FD0A3D /* NoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3180BE392C593D11007A1C96 /* Note */ = {
 			isa = PBXGroup;
 			children = (
-				3180BE3A2C593D17007A1C96 /* ViewController */,
+				3180BE3A2C593D17007A1C96 /* View */,
+				317D04562C5D2EDD00FD0A3D /* ViewModel */,
 			);
 			path = Note;
 			sourceTree = "<group>";
 		};
-		3180BE3A2C593D17007A1C96 /* ViewController */ = {
+		3180BE3A2C593D17007A1C96 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3180BE372C593CEF007A1C96 /* NoteViewController.swift */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,13 +247,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317D04552C5D2ED300FD0A3D /* NoteViewModel.swift in Sources */,
 				3119D70A2C569B2B002FB23E /* UIColor+ex.swift in Sources */,
+				317D04502C5BF9B200FD0A3D /* NoteEntity+CoreDataClass.swift in Sources */,
+				317D04532C5D2CFD00FD0A3D /* NotePersistent.swift in Sources */,
+				317D04512C5BF9B200FD0A3D /* NoteEntity+CoreDataProperties.swift in Sources */,
 				312EA29D2C5693DC00893BF2 /* TableViewSection.swift in Sources */,
 				312EA2972C56911800893BF2 /* Note.swift in Sources */,
 				312EA27E2C56797600893BF2 /* NotesListViewController.swift in Sources */,
 				3180BE382C593CEF007A1C96 /* NoteViewController.swift in Sources */,
 				312EA27A2C56797600893BF2 /* AppDelegate.swift in Sources */,
 				312EA28E2C567C8F00893BF2 /* SimpleNoteTableViewCell.swift in Sources */,
+				317D044D2C5BEDFB00FD0A3D /* Model.xcdatamodeld in Sources */,
 				312EA29B2C5691FD00893BF2 /* NotesListViewModel.swift in Sources */,
 				312EA2902C567CAE00893BF2 /* ImageNoteTableViewCell.swift in Sources */,
 			);
@@ -456,6 +492,20 @@
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		317D044B2C5BEDFB00FD0A3D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				317D044C2C5BEDFB00FD0A3D /* Model.xcdatamodel */,
+			);
+			currentVersion = 317D044C2C5BEDFB00FD0A3D /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = /Users/maksims/Documents/MyNotesApp/NotesApp/CoreData/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 312EA26E2C56797600893BF2 /* Project object */;
 }
